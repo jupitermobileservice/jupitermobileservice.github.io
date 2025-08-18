@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter Mobile Service</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; /* Tailwind's gray-100 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #94a3b8; /* Tailwind's slate-400 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #64748b; /* Tailwind's slate-600 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Header with logo and language switcher -->
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- New logo with increased size for better visibility -->
+            <img id="logo-image" src="https://placehold.co/800x200/000/FACC15?text=JUPITER" alt="Jupiter Mobile Service Logo" class="h-10 md:h-12 w-auto">
+            <div class="flex items-center space-x-4">
+                <select id="language-selector" class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 space-y-16">
+        
+        <!-- Hero Section -->
+        <section class="text-center py-16 bg-blue-50 dark:bg-blue-950 rounded-2xl shadow-lg">
+            <h1 id="hero-heading" class="text-4xl sm:text-5xl font-bold mb-4 text-blue-600 dark:text-blue-400">
+                Welcome to Jupiter Mobile Service
+            </h1>
+            <p id="hero-subheading" class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+                Your one-stop shop for all your device repair and accessory needs.
+            </p>
+        </section>
+
+        <!-- Services Section -->
+        <section>
+            <h2 id="services-heading" class="text-3xl sm:text-4xl font-bold text-center mb-10">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Service Card 1: Mobile Phone Repairs -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <h3 id="service-1-heading" class="text-xl font-bold mb-2">Mobile Phone Repairs</h3>
+                    <p id="service-1-text" class="text-gray-600 dark:text-gray-400">
+                        Screen replacement, battery change, charging port repair, software fixes.
+                    </p>
+                </div>
+                
+                <!-- Service Card 2: PC & Laptop Repairs -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <h3 id="service-2-heading" class="text-xl font-bold mb-2">PC & Laptop Repairs</h3>
+                    <p id="service-2-text" class="text-gray-600 dark:text-gray-400">
+                        Hardware upgrades, virus removal, operating system installation, performance tuning.
+                    </p>
+                </div>
+                
+                <!-- Service Card 3: Accessory Sales -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <h3 id="service-3-heading" class="text-xl font-bold mb-2">Accessory Sales</h3>
+                    <p id="service-3-text" class="text-gray-600 dark:text-gray-400">
+                        Chargers, cables, cases, keyboards, and more.
+                    </p>
+                </div>
+                
+                <!-- Service Card 4: Mobile and Internet Packages -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <h3 id="service-4-heading" class="text-xl font-bold mb-2">Mobile and Internet Packages</h3>
+                    <p id="service-4-text" class="text-gray-600 dark:text-gray-400">
+                        Explore our range of mobile data and internet packages designed to fit your needs, from high-speed data to home internet solutions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+            <h2 id="contact-heading" class="text-3xl sm:text-4xl font-bold text-center mb-6">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+                <!-- Phone Numbers -->
+                <div class="space-y-4">
+                    <h3 id="phone-heading" class="text-xl font-bold">Phone Numbers:</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        <span id="sales-label" class="font-semibold">Sales:</span> <a id="sales-phone1" href="tel:0118835452">0118835452</a>, <a id="sales-phone2" href="tel:0933205670">0933205670</a>
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        <span id="service-label" class="font-semibold">Service:</span> <a id="service-phone1" href="tel:0118835491">0118835491</a>, <a id="service-phone2" href="tel:0932830083">0932830083</a>
+                    </p>
+                </div>
+                <!-- Email & Location -->
+                <div class="space-y-4">
+                    <h3 id="other-contact-heading" class="text-xl font-bold">Email & Location:</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        <span id="email-label" class="font-semibold">Email:</span> <a id="email-link" href="mailto:jupiter.center.d@gmail.com">jupiter.center.d@gmail.com</a>
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        <span id="location-label" class="font-semibold">Location:</span> <a id="location-link" href="https://maps.app.goo.gl/fB4Xyyw1dgy8EDtp6" target="_blank" class="text-blue-500 hover:underline">View on Google Maps</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 shadow-inner mt-8">
+        <div class="container mx-auto px-4 py-4 text-center text-gray-500 dark:text-gray-400">
+            <p id="copyright-text">&copy; 2024 Jupiter Mobile Service. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data structure to hold the content for each language
+        const translations = {
+            en: {
+                logoAltText: "Jupiter Mobile Service Logo",
+                hero: {
+                    heading: "Welcome to Jupiter Mobile Service",
+                    subheading: "Your one-stop shop for all your device repair and accessory needs."
+                },
+                services: {
+                    heading: "Our Services",
+                    service1: {
+                        heading: "Mobile Phone Repairs",
+                        text: "Screen replacement, battery change, charging port repair, software fixes."
+                    },
+                    service2: {
+                        heading: "PC & Laptop Repairs",
+                        text: "Hardware upgrades, virus removal, operating system installation, performance tuning."
+                    },
+                    service3: {
+                        heading: "Accessory Sales",
+                        text: "Chargers, cables, cases, keyboards, and more."
+                    },
+                    service4: {
+                        heading: "Mobile and Internet Packages",
+                        text: "Explore our range of mobile data and internet packages designed to fit your needs, from high-speed data to home internet solutions."
+                    }
+                },
+                contact: {
+                    heading: "Contact Us",
+                    phoneHeading: "Phone Numbers:",
+                    salesLabel: "Sales:",
+                    serviceLabel: "Service:",
+                    otherContactHeading: "Email & Location:",
+                    emailLabel: "Email:",
+                    locationLabel: "Location:",
+                    locationLinkText: "View on Google Maps",
+                },
+                footer: {
+                    text: "© 2024 Jupiter Mobile Service. All Rights Reserved."
+                }
+            },
+            ar: {
+                logoAltText: "شعار جوبيتر لخدمات الجوال",
+                hero: {
+                    heading: "أهلاً بك في خدمات جوبيتر للجوال",
+                    subheading: "متجرك الشامل لجميع احتياجات إصلاح الأجهزة وملحقاتها."
+                },
+                services: {
+                    heading: "خدماتنا",
+                    service1: {
+                        heading: "إصلاح الهواتف المحمولة",
+                        text: "استبدال الشاشة، تغيير البطارية، إصلاح منفذ الشحن، إصلاحات البرامج."
+                    },
+                    service2: {
+                        heading: "إصلاح أجهزة الكمبيوتر واللابتوب",
+                        text: "ترقيات الأجهزة، إزالة الفيروسات، تثبيت نظام التشغيل، تحسين الأداء."
+                    },
+                    service3: {
+                        heading: "بيع الإكسسوارات",
+                        text: "شواحن، كابلات، حافظات، لوحات مفاتيح، والمزيد."
+                    },
+                    service4: {
+                        heading: "باقات الهاتف والإنترنت",
+                        text: "استكشف مجموعتنا من باقات بيانات الهاتف المحمول والإنترنت المصممة لتناسب احتياجاتك، من البيانات عالية السرعة إلى حلول الإنترنت المنزلية."
+                    }
+                },
+                contact: {
+                    heading: "تواصل معنا",
+                    phoneHeading: "أرقام الهواتف:",
+                    salesLabel: "المبيعات:",
+                    serviceLabel: "الصيانة:",
+                    otherContactHeading: "البريد الإلكتروني والموقع:",
+                    emailLabel: "البريد الإلكتروني:",
+                    locationLabel: "الموقع:",
+                    locationLinkText: "عرض على خرائط جوجل",
+                },
+                footer: {
+                    text: "© 2024 خدمات جوبيتر للجوال. جميع الحقوق محفوظة."
+                }
+            }
+        };
+
+        // Get elements from the DOM
+        const languageSelector = document.getElementById('language-selector');
+        const htmlElement = document.querySelector('html');
+        
+        const heroHeading = document.getElementById('hero-heading');
+        const heroSubheading = document.getElementById('hero-subheading');
+
+        const servicesHeading = document.getElementById('services-heading');
+        const service1Heading = document.getElementById('service-1-heading');
+        const service1Text = document.getElementById('service-1-text');
+        const service2Heading = document.getElementById('service-2-heading');
+        const service2Text = document.getElementById('service-2-text');
+        const service3Heading = document.getElementById('service-3-heading');
+        const service3Text = document.getElementById('service-3-text');
+        const service4Heading = document.getElementById('service-4-heading');
+        const service4Text = document.getElementById('service-4-text');
+
+        const contactHeading = document.getElementById('contact-heading');
+        const phoneHeading = document.getElementById('phone-heading');
+        const salesLabel = document.getElementById('sales-label');
+        const serviceLabel = document.getElementById('service-label');
+        const otherContactHeading = document.getElementById('other-contact-heading');
+        const emailLabel = document.getElementById('email-label');
+        const locationLabel = document.getElementById('location-label');
+        const locationLink = document.getElementById('location-link');
+
+        const copyrightText = document.getElementById('copyright-text');
+
+        // Function to update the page content based on the selected language
+        function updateContent(lang) {
+            if (translations[lang]) {
+                const content = translations[lang];
+
+                heroHeading.textContent = content.hero.heading;
+                heroSubheading.textContent = content.hero.subheading;
+                servicesHeading.textContent = content.services.heading;
+                service1Heading.textContent = content.services.service1.heading;
+                service1Text.textContent = content.services.service1.text;
+                service2Heading.textContent = content.services.service2.heading;
+                service2Text.textContent = content.services.service2.text;
+                service3Heading.textContent = content.services.service3.heading;
+                service3Text.textContent = content.services.service3.text;
+                service4Heading.textContent = content.services.service4.heading;
+                service4Text.textContent = content.services.service4.text;
+                
+                // Update contact section content
+                contactHeading.textContent = content.contact.heading;
+                phoneHeading.textContent = content.contact.phoneHeading;
+                salesLabel.textContent = content.contact.salesLabel;
+                serviceLabel.textContent = content.contact.serviceLabel;
+                otherContactHeading.textContent = content.contact.otherContactHeading;
+                emailLabel.textContent = content.contact.emailLabel;
+                locationLabel.textContent = content.contact.locationLabel;
+                locationLink.textContent = content.contact.locationLinkText;
+
+                copyrightText.textContent = content.footer.text;
+
+                // Set text direction for Arabic
+                if (lang === 'ar') {
+                    htmlElement.dir = 'rtl';
+                } else {
+                    htmlElement.dir = 'ltr';
+                }
+            } else {
+                console.error("Language not found in translations:", lang);
+            }
+        }
+
+        // Add an event listener to the language selector
+        languageSelector.addEventListener('change', (event) => {
+            const selectedLang = event.target.value;
+            updateContent(selectedLang);
+        });
+
+        // Initial call to set the content on page load
+        updateContent(languageSelector.value);
+
+    </script>
+
+</body>
+</html>
