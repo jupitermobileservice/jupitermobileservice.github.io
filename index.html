@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jupiter Mobile Service</title>
-    <!-- Use the Inter font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Load Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -32,10 +30,8 @@
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-    <!-- Header with logo and language switcher -->
     <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- New logo with increased size for better visibility -->
             <img id="logo-image" src="https://placehold.co/800x200/000/FACC15?text=JUPITER" alt="Jupiter Mobile Service Logo" class="h-10 md:h-12 w-auto">
             <div class="flex items-center space-x-4">
                 <select id="language-selector" class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700">
@@ -48,7 +44,6 @@
 
     <main class="container mx-auto px-4 py-8 space-y-16">
         
-        <!-- Hero Section -->
         <section class="text-center py-16 bg-blue-50 dark:bg-blue-950 rounded-2xl shadow-lg">
             <h1 id="hero-heading" class="text-4xl sm:text-5xl font-bold mb-4 text-blue-600 dark:text-blue-400">
                 Welcome to Jupiter Mobile Service
@@ -58,12 +53,10 @@
             </p>
         </section>
 
-        <!-- Services Section -->
         <section>
             <h2 id="services-heading" class="text-3xl sm:text-4xl font-bold text-center mb-10">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <!-- Service Card 1: Mobile Phone Repairs -->
                 <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                     <h3 id="service-1-heading" class="text-xl font-bold mb-2">Mobile Phone Repairs</h3>
                     <p id="service-1-text" class="text-gray-600 dark:text-gray-400">
@@ -71,7 +64,6 @@
                     </p>
                 </div>
                 
-                <!-- Service Card 2: PC & Laptop Repairs -->
                 <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                     <h3 id="service-2-heading" class="text-xl font-bold mb-2">PC & Laptop Repairs</h3>
                     <p id="service-2-text" class="text-gray-600 dark:text-gray-400">
@@ -79,7 +71,6 @@
                     </p>
                 </div>
                 
-                <!-- Service Card 3: Accessory Sales -->
                 <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                     <h3 id="service-3-heading" class="text-xl font-bold mb-2">Accessory Sales</h3>
                     <p id="service-3-text" class="text-gray-600 dark:text-gray-400">
@@ -87,7 +78,6 @@
                     </p>
                 </div>
                 
-                <!-- Service Card 4: Mobile and Internet Packages -->
                 <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                     <h3 id="service-4-heading" class="text-xl font-bold mb-2">Mobile and Internet Packages</h3>
                     <p id="service-4-text" class="text-gray-600 dark:text-gray-400">
@@ -97,11 +87,9 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact-section" class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
             <h2 id="contact-heading" class="text-3xl sm:text-4xl font-bold text-center mb-6">Contact Us</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
-                <!-- Phone Numbers -->
                 <div class="space-y-4">
                     <h3 id="phone-heading" class="text-xl font-bold">Phone Numbers:</h3>
                     <p class="text-gray-700 dark:text-gray-300">
@@ -111,7 +99,6 @@
                         <span id="service-label" class="font-semibold">Service:</span> <a id="service-phone1" href="tel:0118835491">0118835491</a>, <a id="service-phone2" href="tel:0932830083">0932830083</a>
                     </p>
                 </div>
-                <!-- Email & Location -->
                 <div class="space-y-4">
                     <h3 id="other-contact-heading" class="text-xl font-bold">Email & Location:</h3>
                     <p class="text-gray-700 dark:text-gray-300">
@@ -126,10 +113,13 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-white dark:bg-gray-800 shadow-inner mt-8">
         <div class="container mx-auto px-4 py-4 text-center text-gray-500 dark:text-gray-400">
-            <p id="copyright-text">&copy; 2024 Jupiter Mobile Service. All Rights Reserved.</p>
+            <address id="address-info" class="not-italic mb-2">
+                Damascus, Syria.<br>
+                Alzahira, South the bridge, On the main road
+            </address>
+            <p id="copyright-text">© 2024 Jupiter Mobile Service. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -172,6 +162,7 @@
                     locationLinkText: "View on Google Maps",
                 },
                 footer: {
+                    address: "Damascus, Syria.<br>Alzahira, South the bridge, On the main road",
                     text: "© 2024 Jupiter Mobile Service. All Rights Reserved."
                 }
             },
@@ -199,7 +190,7 @@
                         heading: "باقات الهاتف والإنترنت",
                         text: "استكشف مجموعتنا من باقات بيانات الهاتف المحمول والإنترنت المصممة لتناسب احتياجاتك، من البيانات عالية السرعة إلى حلول الإنترنت المنزلية."
                     }
-                },
+                    },
                 contact: {
                     heading: "تواصل معنا",
                     phoneHeading: "أرقام الهواتف:",
@@ -211,6 +202,7 @@
                     locationLinkText: "عرض على خرائط جوجل",
                 },
                 footer: {
+                    address: "دمشق، سوريا.<br>الزاهرة، جنوب الجسر، على الطريق الرئيسي",
                     text: "© 2024 خدمات جوبيتر للجوال. جميع الحقوق محفوظة."
                 }
             }
@@ -242,6 +234,7 @@
         const locationLabel = document.getElementById('location-label');
         const locationLink = document.getElementById('location-link');
 
+        const addressInfo = document.getElementById('address-info');
         const copyrightText = document.getElementById('copyright-text');
 
         // Function to update the page content based on the selected language
@@ -271,6 +264,7 @@
                 locationLabel.textContent = content.contact.locationLabel;
                 locationLink.textContent = content.contact.locationLinkText;
 
+                addressInfo.innerHTML = content.footer.address;
                 copyrightText.textContent = content.footer.text;
 
                 // Set text direction for Arabic
